@@ -1,5 +1,5 @@
 const dynamicText = document.querySelector('.dynamic-text');
-const words = ["Python Developer", "Linux Wizard", "Backend Developer", "Problem Solver", "Continuous Learner"];
+const words = ["Python Developer", "Linux Wizard", "Backend Developer", "Problem Solver", "Fast Learner"];
 
 let wordIndex = 0;
 let letterIndex = 0;
@@ -16,7 +16,9 @@ const typeEffect = () => {
     letterIndex--;
   }
   if(letterIndex === currentWord.length) {
-    isDeleting = true;
+    setTimeout(() => {
+      isDeleting = true;
+    }, 750);
   }
   if(letterIndex === 0) {
     isDeleting = false;

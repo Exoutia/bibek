@@ -12,6 +12,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <script src="script.js" defer></script>
     <script>
       tailwind.config = {
@@ -34,12 +40,12 @@
     <style type="text/tailwindcss">
       /* Style the icons */
       .social-icons a i {
-        @apply text-2xl text-blue-500 transition-colors; /* Apply Tailwind CSS classes */
+        @apply text-xl text-complementary_1 transition-colors; /* Apply Tailwind CSS classes */
       }
 
       /* Add hover effect for icons */
       .social-icons a:hover i {
-        @apply text-red-500; /* Change color on hover */
+        @apply text-accent; /* Change color on hover */
       }
     </style>
   </head>
@@ -56,6 +62,7 @@
             alt="SVG logo"
             width="50"
             height="50"
+            class="inline-block ml-5"
           />
           <button
             data-collapse-toggle="navbar-default"
@@ -130,7 +137,10 @@
 
     <main>
       <!-- Start: Hero -->
-      <section id="hero" class="py-8 bg-neutral_2 dark:bg-neutral_1">
+      <section
+        id="hero"
+        class="min-h-screen w-full bg-neutral_2 dark:bg-neutral_1 flex"
+      >
         <div
           class="grid max-w-screen-xl px-8 py-4 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
         >
@@ -147,7 +157,7 @@
               <span class="dynamic-text text-complementary_1"> </span
               ><span class="typed-cursor" aria-hidden="true">|</span>
             </p>
-            <div class="flex gap-6 social-icons">
+            <div class="flex gap-6 social-icons justify-around">
               <a
                 href="https://mobile.twitter.com/bibekjha566"
                 target="_blank"
@@ -183,8 +193,36 @@
       <!-- End: Hero -->
 
       <!-- Start: About Me -->
-      <section id="about" class="">
-        <div>About Me</div>
+      <section id="about" class="dark:bg-neutral_1 max-h-screen bg-neutral_2">
+        <h2
+          class="text-neutral_1 text-4xl dark:text-neutral_2 text-center font-bold"
+        >
+          About Me
+        </h2>
+        
+        <div
+          class="grid max-w-screen-xl px-8 py-4 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+        >
+          <div class="mr-auto place-self-center lg:col-span-6">
+            <p
+              class="text-neutral_1 leading-5 tracking-wider font-regular dark:text-neutral_2 text-justify mx-3"
+            >
+              I'm a passionate and driven individual who loves tackling new
+              challenges. Whether it's coding in Python, exploring cutting-edge
+              technologies, or mastering Linux, I'm always eager to learn and
+              grow. My calm demeanor helps me excel under pressure, and I
+              approach every task with optimism and a team player mentality.
+              Let's collaborate and achieve great things together!
+            </p>
+          </div>
+        </div>
+        <div class="ml-auto place-self-center lg:col-span-6">
+          <img
+            src="assets/images/profile.jpg"
+            alt="Profile Image"
+            class="rounded-full"
+          />
+        </div>
       </section>
       <!-- End: About Me -->
 
